@@ -27,11 +27,12 @@ function getpokemon(pokemon){
         return response.json()
     })
     .then(function(data){
-        document.getElementById('character3').innerHTML = `
-        <img id = "char11" src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "200px" height = "200px">
+        document.getElementById('box').innerHTML = `
+        <h5>${data.results[0].original_title}</h5>
+        <img src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "240px" height = "200px">
+        <p id="text">${data.results[0].overview}</p>
+        <p id = "text"> Release ${data.results[0].release_date} </p>
         `
-
-        
     })
 }
 
