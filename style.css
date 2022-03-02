@@ -6,7 +6,8 @@
 h1 {
     font-size: 70px;
     text-align: center;
-    padding: 20px
+    padding: 20px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .col{
