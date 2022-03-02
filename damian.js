@@ -11,13 +11,9 @@ window.addEventListener('DOMContentLoaded', () => {
 //this is for teh release date data.results[0].release_date
 //this is for the img data.results[0].poster_path
 const input2 = document.getElementById('code2');
-const submit2 = document.getElementById("submit2");
-submit2.addEventListener('click', () => {
+const work = document.getElementById("submit2");
+work.addEventListener('click', () => {
     getpokemon(input2.value)
-//   event.preventDefault();
-//   if(input.value === "Legendary" || input.value === "legendary") {
-//     updateValue()
-//   }
 })
 
 
