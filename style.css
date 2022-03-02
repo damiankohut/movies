@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    border: 1px solid red;
+    border: 1px solid ;
 }
 
 h1 {
@@ -9,15 +9,26 @@ h1 {
     padding: 20px
 }
 
-#both {
-    height: 100%;
-    width: 100%;
+.col{
+   height: 250px
 }
-
+.carousel-Inner {
+    height:100px
+}
+img{
+    height: 250px
+}
+.carousel-item active{
+    height: 250px
+}
+.carousel-item {
+    height: 250px
+}
 .col-md {
     height: 800px;
 }
 
-#carasouel {
-    height: 760px;
+#carasouelSlide {
+    height: 3000px;
 }
+
