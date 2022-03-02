@@ -1,8 +1,11 @@
 * {
     margin: 0;
+    font-family: "Times New Roman", Times, serif;
     /* border: 1px solid ; */
 }
-
+#form {
+    display: flex;
+}
 h1 {
     font-size: 70px;
     text-align: center;
@@ -11,19 +14,19 @@ h1 {
 }
 
 .col{
-   height: 250px
+   height: 250px;
 }
 .carousel-Inner {
-    height:100px
+    height:500px;
 }
 img{
-    height: 250px
+    height: 250px;
 }
 .carousel-item active{
     height: 250px
 }
 .carousel-item {
-    height: 250px
+    height: 250px;
 }
 .col-md {
     height: 800px;
