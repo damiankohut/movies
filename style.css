@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    border: 1px solid red;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    padding: 20px
+}
+
+#both {
+    height: 100%;
+    width: 100%;
+}
+
+.col-md {
+    height: 800px;
+}
+
+#carasouel {
+    height: 760px;
+}
