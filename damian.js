@@ -1,4 +1,6 @@
-window.addEventListener('DOMContentLoaded', () => {
+indow.addEventListener('DOMContentLoaded', () => {
+
+    
     const work = document.getElementById("submit2");
     work.addEventListener('click', movieFinder )
 })
