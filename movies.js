@@ -1,94 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
     const moviesAPI = "https://api.themoviedb.org/3/discover/movie?api_key=3c8d31b949ad58738c6e56fd0522a70a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
     fetch(moviesAPI)
     .then(respone => respone.json())
     .then(data => renderImages(data.results))
-  
+    
     const work = document.getElementById("submit2");
     work.addEventListener('click', movieFinder )
     
 
 
 
-// function onDragStart(event) {
-//     event
-//       .dataTransfer
-//       .setData('text', event.target.id);
-//     event
-//       .currentTarget
-//       .style
-//       .backgroundColor = 'yellow';
-//   }
-
-//   function onDragOver(event) {
-//     event.preventDefault();
-//   }
-
-//   function onDrop(event) {
-//     const id = event
-//       .dataTransfer
-//       .getData('text');
-//       const draggableElement = document.getElementById(id);
-//       console.log(draggableElement)
-//       for (let i= 0;i<draggableElement.length; i++){
-//         draggableElements += draggableElement[i]
-//           console.log(draggableElements)
-//       }
-//       const dropzone = event.target;
-//       dropzone.appendChild(draggableElements);
-//       event
-//     .dataTransfer
-//     .clearData();
-//   }
-})
-function onDragStart(event) {
-    event
-      .dataTransfer
-      .setData('text', event.target.id);
-    event
-      .currentTarget
-      .style
-      .backgroundColor = 'yellow';
-  }
-
-  function onDragOver(event) {
-    event.preventDefault();
-  }
-
-  function onDrop(event) {
-    const id = event
-      .dataTransfer
-      .getData('text');
-      let draggableElement = document.getElementById(id);
-      console.log(draggableElement.src)
-    //  draggableElement = draggableElement[0].backdrop_path
-
-      const dropzone = event.target;
-      dropzone.appendChild(draggableElement);
-      event
-    .dataTransfer
-    .clearData();
-  }
-  
- //favorite movie list 
-//  let imgCatches = document.getElementsByClassName('imgCatch');
-//  const empties = document.querySelectorAll('.empty');
-
-//  empties.forEach(empty => {
-
-//     empty.addEventListener('dragover', e => {
-  
-//       e.preventDefault()
-  
-      
-  
-//       const imgCatch = document.querySelector('.imgCatch')
-//       console.log(imgCatch)
-//        console.log(e.target)
-  
-//         empties.appendChild(imgCatch)
-  
-//     })
+   })
   
 //   })
 
@@ -103,8 +25,6 @@ function onDragStart(event) {
 //            console.log('end')
 //     }) ; 
 //  }
-
-
 function movieFinder() {
     const input2 = document.getElementById('code2');
     getpokemon(input2.value)
@@ -122,7 +42,6 @@ function renderImages(data){
     }
 
 
-
     function getpokemon(pokemon){
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=3c8d31b949ad58738c6e56fd0522a70a&language=en-US&query=${pokemon}&page=1&include_adult=false`)
         .then(function(response){
@@ -130,9 +49,9 @@ function renderImages(data){
         })
         .then(function(data){
             let movieId = data.results[0].id
-            document.getElementById('cricket').innerHTML = `
+            document.getElementById('summary').innerHTML = `
             <h5>${data.results[0].original_title}</h5>
-            <img src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "240px" height = "200px">
+            <img src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "100%" >
             <p id="text">${data.results[0].overview}</p>
             <p id = "text"> Release ${data.results[0].release_date} </p>
             `
