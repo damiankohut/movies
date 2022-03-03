@@ -6,7 +6,40 @@ window.addEventListener('DOMContentLoaded', () => {
     
     const work = document.getElementById("submit2");
     work.addEventListener('click', movieFinder )
-})
+    
+
+
+
+   })
+  
+   function onDragStart(event) {
+    event
+      .dataTransfer
+      .setData('text/plain', event.target.id);
+  
+    event
+      .currentTarget
+      .style
+      .backgroundColor = 'yellow';
+  }
+
+  function onDragOver(event) {
+    event.preventDefault();
+  }
+  function onDrop(event) {
+    const id = event
+      .dataTransfer
+      .getData('text');
+      const draggableElement = document.getElementById(id);
+      console.log(draggableElement.src)
+      const dropzone = event.target;
+      dropzone.appendChild(draggableElement);
+    event
+    .dataTransfer
+    .clearData();
+  }
+    
+  
 function movieFinder() {
     const input2 = document.getElementById('code2');
     getpokemon(input2.value)
@@ -18,7 +51,7 @@ function renderImages(data){
     let movieImages = document.querySelectorAll('img')
     for(let i = 0; i < movieImages.length; i++){
         movieImages[i].src = `https://image.tmdb.org/t/p/w500/${data[i].poster_path}`
-        console.log(data)
+        // console.log(data)
     }
 
     }
