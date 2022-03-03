@@ -17,24 +17,25 @@ form {
 }
 #submit2 {
     width: 100px;
-    padding: 0px 5px 0px 20px;
 }
 
 #movie {
     font-size: 45px;
     font-family: Bungee;
-    padding-bottom: -900px;
 }
 
 .col{
-    margin-top: 20px; 
-    margin-left: -60px;  
-    height: 250px;
-    width: 65%;
+    margin-top: -100px;
+    height: 550px;
+    width: 100%
 }
 .carousel-Inner {
     height: 500px;
-    width: 400px;
+    width: 100%
+}
+
+.col-mdtext-center{
+    
 }
 
 img{
@@ -45,7 +46,7 @@ img{
 }
 .carousel-item {
     height: 100%;
-    width: 350px;
+    width: 100%
 
 }
 .col-md {
