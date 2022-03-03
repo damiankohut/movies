@@ -18,7 +18,6 @@ function renderImages(data){
     let movieImages = document.querySelectorAll('img')
     for(let i = 0; i < movieImages.length; i++){
         movieImages[i].src = `https://image.tmdb.org/t/p/w500/${data[i].poster_path}`
-        
         console.log(data)
     }
 
