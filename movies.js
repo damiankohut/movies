@@ -14,20 +14,13 @@ function movieFinder() {
 
 //images.src = `${data.poster_path}`
 function renderImages(data){
+    console
     let movieImages = document.querySelectorAll('img')
     for(let i = 0; i < data.length; i++){
         movieImages[i].src = `https://image.tmdb.org/t/p/w500/${data[i].poster_path}`
         console.log(data)
     }
-    //    // console.log(poster.poster_path)
-    //     let movieImages = document.querySelectorAll('img')
-    //     for(let i = 0; i <= movieImages.length; i++){
-    //         console.log(movieImages[i])
-    //         movieImages[i].src = poster.poster_path
-            
-    //     }
-    //     //let images = poster.poster_path
-    //     console.log(images)
+
     }
 
 
