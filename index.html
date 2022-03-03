@@ -14,16 +14,19 @@
     </head>
     <body class="p-3 mb-2 bg-dark text-white">
         <div class="container-fluid" >
-            <h1 class="container">Film Spotter</h1>
+            <h1 class="container bg-danger 100%">Film Spotter</h1>
             <div class="row" id="both">
             <div class="col-md-3" id="search">
-              <form id = "form" onsubmit="return false">
-                <h6 style="width: 150px; margin-bottom: 0px;">Search for movie</h6>
+
+              <h6 style="width: 150px; margin-bottom: 0px;">Search for movie</h6>
+              <form id="form" onsubmit="return false" style="width: 400px; display: flex;">
                 <input type="text" id="code2" name="code" value=""><br>
                 <input id = "submit2" type="submit" value="Search">
               </form> 
+
+              
               <div id="container1">
-              <div id= "cricket" class="card p-3 mb-2 bg-dark text-white">
+              <div id= "summary" class="card p-3 mb-2 bg-dark text-white">
                 <div style="width: 250px;">
                 </div>
               </div>

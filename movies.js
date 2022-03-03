@@ -31,9 +31,9 @@ function renderImages(data){
         })
         .then(function(data){
             let movieId = data.results[0].id
-            document.getElementById('cricket').innerHTML = `
+            document.getElementById('summary').innerHTML = `
             <h5>${data.results[0].original_title}</h5>
-            <img src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "100%" height = "200px">
+            <img src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "100%" >
             <p id="text">${data.results[0].overview}</p>
             <p id = "text"> Release ${data.results[0].release_date} </p>
             `
