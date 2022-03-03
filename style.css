@@ -1,38 +1,58 @@
 * {
     margin: 0;
-    font-family: "Times New Roman", Times, serif;
     /* border: 1px solid ; */
 }
-#form {
-    display: flex;
-}
+
+
 h1 {
-    font-size: 70px;
+    font-size: 75px;
     text-align: center;
-    padding: 20px;
-    font-family: "Times New Roman", Times, serif;
+    padding: 25px;
+    font-family: Bungee;
+}
+
+form {
+    width: 100px;
+    padding: -10px 0px 0px 0px;
+}
+#submit2 {
+    width: 100px;
+    padding: 0px 5px 0px 20px;
+}
+
+#movie {
+    font-size: 45px;
+    font-family: Bungee;
+    padding-bottom: -900px;
 }
 
 .col{
-   height: 250px;
+    margin-top: 20px; 
+    margin-left: -60px;  
+    height: 250px;
+    width: 65%;
 }
 .carousel-Inner {
-    height:500px;
+    height: 500px;
+    width: 400px;
 }
+
 img{
-    height: 250px;
+    height: 550px;
 }
 .carousel-item active{
-    height: 250px
+    height: 500px;
 }
 .carousel-item {
-    height: 250px;
+    height: 100%;
+    width: 350px;
+
 }
 .col-md {
     height: 800px;
 }
 
 #carasouelSlide {
-    height: 3000px;
+    height: 9000px;
 }
 
