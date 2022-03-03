@@ -52,5 +52,15 @@ img{
 
 #carasouelSlide {
     height: 9000px;
+    
+}
+
+.empty{
+    display:inline-block;
+    height: 260px;
+    width: 260px;
+    margin: 10px;
+    border: 3px greenyellow  solid;
+    background-color: white;
 }
 
