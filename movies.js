@@ -7,23 +7,102 @@ document.addEventListener('DOMContentLoaded', () => {
     const work = document.getElementById("submit2");
     work.addEventListener('click', movieFinder )
     
+
+
+
+// function onDragStart(event) {
+//     event
+//       .dataTransfer
+//       .setData('text', event.target.id);
+//     event
+//       .currentTarget
+//       .style
+//       .backgroundColor = 'yellow';
+//   }
+
+//   function onDragOver(event) {
+//     event.preventDefault();
+//   }
+
+//   function onDrop(event) {
+//     const id = event
+//       .dataTransfer
+//       .getData('text');
+//       const draggableElement = document.getElementById(id);
+//       console.log(draggableElement)
+//       for (let i= 0;i<draggableElement.length; i++){
+//         draggableElements += draggableElement[i]
+//           console.log(draggableElements)
+//       }
+//       const dropzone = event.target;
+//       dropzone.appendChild(draggableElements);
+//       event
+//     .dataTransfer
+//     .clearData();
+//   }
 })
+function onDragStart(event) {
+    event
+      .dataTransfer
+      .setData('text', event.target.id);
+    event
+      .currentTarget
+      .style
+      .backgroundColor = 'yellow';
+  }
 
+  function onDragOver(event) {
+    event.preventDefault();
+  }
+
+  function onDrop(event) {
+    const id = event
+      .dataTransfer
+      .getData('text');
+      let draggableElement = document.getElementById(id);
+      console.log(draggableElement.src)
+    //  draggableElement = draggableElement[0].backdrop_path
+
+      const dropzone = event.target;
+      dropzone.appendChild(draggableElement);
+      event
+    .dataTransfer
+    .clearData();
+  }
+  
  //favorite movie list 
- let imgCatches = document.querySelectorAll('.imgCatch');
- const empties = document.querySelectorAll('.empty');
+//  let imgCatches = document.getElementsByClassName('imgCatch');
+//  const empties = document.querySelectorAll('.empty');
 
- for (var i = 0 ; i < imgCatches.length; i++) {
-    imgCatches[i].addEventListener('ondragstart' , () => {
-           console.log('start')
-    }) ; 
- }
+//  empties.forEach(empty => {
+
+//     empty.addEventListener('dragover', e => {
+  
+//       e.preventDefault()
+  
+      
+  
+//       const imgCatch = document.querySelector('.imgCatch')
+//       console.log(imgCatch)
+//        console.log(e.target)
+  
+//         empties.appendChild(imgCatch)
+  
+//     })
+  
+//   })
+
+//  for (var i = 0 ; i < imgCatches.length; i++) {
+//     imgCatches[i].addEventListener('click' , function(event) {
+//            console.log('start')
+//     }) ; 
+//  }
  
- for (var i = 0 ; i < imgCatches.length; i++) {
-    imgCatches[i].addEventListener('dragend' , () => {
-           console.log('end')
-    }) ; 
- }
+//  for (var i = 0 ; i < imgCatches.length; i++) {
+//     imgCatches[i].addEventListener('dragend' , () => {
+//            console.log('end')
+//     }) ; 
+//  }
 
 
 function movieFinder() {
@@ -37,7 +116,7 @@ function renderImages(data){
     let movieImages = document.querySelectorAll('img')
     for(let i = 0; i < movieImages.length; i++){
         movieImages[i].src = `https://image.tmdb.org/t/p/w500/${data[i].poster_path}`
-        console.log(data)
+        // console.log(data)
     }
 
     }
