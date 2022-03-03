@@ -12,19 +12,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
    })
   
-//   })
+   function onDragStart(event) {
+    event
+      .dataTransfer
+      .setData('text/plain', event.target.id);
+  
+    event
+      .currentTarget
+      .style
+      .backgroundColor = 'yellow';
+  }
 
-//  for (var i = 0 ; i < imgCatches.length; i++) {
-//     imgCatches[i].addEventListener('click' , function(event) {
-//            console.log('start')
-//     }) ; 
-//  }
- 
-//  for (var i = 0 ; i < imgCatches.length; i++) {
-//     imgCatches[i].addEventListener('dragend' , () => {
-//            console.log('end')
-//     }) ; 
-//  }
+  function onDragOver(event) {
+    event.preventDefault();
+  }
+  function onDrop(event) {
+    const id = event
+      .dataTransfer
+      .getData('text');
+      const draggableElement = document.getElementById(id);
+      console.log(draggableElement.src)
+      const dropzone = event.target;
+      dropzone.appendChild(draggableElement);
+    event
+    .dataTransfer
+    .clearData();
+  }
+    
+  
 function movieFinder() {
     const input2 = document.getElementById('code2');
     getpokemon(input2.value)
