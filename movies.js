@@ -46,7 +46,7 @@ function renderImages(data){
                 })
                 .then(function(data){
                 document.getElementById('link').innerHTML = `
-                <a href=${data.results.US.link}>Check where you can watch this</a>
+                <a href=${data.results.US.link} target="_blank" rel="noopener noreferrer">Check where you can watch this</a>
                 `
                 })
             }
