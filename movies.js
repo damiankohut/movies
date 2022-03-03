@@ -1,12 +1,31 @@
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const moviesAPI = "https://api.themoviedb.org/3/discover/movie?api_key=3c8d31b949ad58738c6e56fd0522a70a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
     fetch(moviesAPI)
     .then(respone => respone.json())
     .then(data => renderImages(data.results))
-    
+  
     const work = document.getElementById("submit2");
     work.addEventListener('click', movieFinder )
+    
 })
+
+ //favorite movie list 
+ let imgCatches = document.querySelectorAll('.imgCatch');
+ const empties = document.querySelectorAll('.empty');
+
+ for (var i = 0 ; i < imgCatches.length; i++) {
+    imgCatches[i].addEventListener('ondragstart' , () => {
+           console.log('start')
+    }) ; 
+ }
+ 
+ for (var i = 0 ; i < imgCatches.length; i++) {
+    imgCatches[i].addEventListener('dragend' , () => {
+           console.log('end')
+    }) ; 
+ }
+
+
 function movieFinder() {
     const input2 = document.getElementById('code2');
     getpokemon(input2.value)
