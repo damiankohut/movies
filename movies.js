@@ -24,7 +24,6 @@ function renderImages(data){
     }
 
 
-
     function getpokemon(pokemon){
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=3c8d31b949ad58738c6e56fd0522a70a&language=en-US&query=${pokemon}&page=1&include_adult=false`)
         .then(function(response){
@@ -34,7 +33,7 @@ function renderImages(data){
             let movieId = data.results[0].id
             document.getElementById('cricket').innerHTML = `
             <h5>${data.results[0].original_title}</h5>
-            <img src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "240px" height = "200px">
+            <img src = 'https://image.tmdb.org/t/p/w500/${data.results[0].poster_path}' width = "100%" height = "200px">
             <p id="text">${data.results[0].overview}</p>
             <p id = "text"> Release ${data.results[0].release_date} </p>
             `
