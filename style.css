@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    /* border: 1px solid ; */
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    padding: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.col{
+   height: 250px
+}
+.carousel-Inner {
+    height:100px
+}
+img{
+    height: 250px
+}
+.carousel-item active{
+    height: 250px
+}
+.carousel-item {
+    height: 250px
+}
+.col-md {
+    height: 800px;
+}
+
+#carasouelSlide {
+    height: 3000px;
+}
+
+.empty{
+    display:inline-block;
+    height: 260px;
+    width: 260px;
+    margin: 10px;
+    border: 3px greenyellow  solid;
+    background-color: white;
+}
+
