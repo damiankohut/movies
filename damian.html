@@ -9,44 +9,47 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link href = "style.css" rel = "stylesheet">
         <script src="movies.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/fsz.PNG">
     </head>
-    
     <body class="p-3 mb-2 bg-dark text-white">
-        <div >
-            <h1 >Film Motion</h1>
+        <div class="container-fluid" >
+            <h1 class="container bg-danger 100%">Film Spotter</h1>
             <div class="row" id="both">
-              
             <div class="col-md-3" id="search">
-              <form id = "form" onsubmit="return false">
+
+              <h6 style="width: 150px; margin-bottom: 0px; ">Search for movie</h6>
+              <form id="form" onsubmit="return false" style="width: 400px; display: flex;">
                 <input type="text" id="code2" name="code" value=""><br>
-                <input id = "submit2" type="submit" value="Submit">
+                <input id = "submit2" type="submit" value="Search">
               </form> 
-              <div >
-              <div id= "box" class="card p-3 mb-2 bg-dark text-white">
-                <img>
+             
               
+              <div id="container1">
+              <div id= "summary" class="card p-3 mb-2 bg-dark text-white">
                 <div style="width: 250px;">
                 </div>
-
               </div>
-              <p id="box1">hello</p>
+              <p id="link"></p>
               </div>
             </div>
-            <div class="col-md" id="movie">
-            <div class="container" id="carasouel">
-                <div class="container">
+            <div class="col-md text-center" id="movie" >
+              <h2 style="margin-bottom: 0px;padding-top: 0px;">Popular Movies Today</h2>
+            <div class="container bg-danger" id="carasouel">
+                <div class="container"style="padding-top: 100px; padding-left: 0px; padding: right 0px;">
                     <div class="row align-items-start">
                       <div class="col">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                          
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img  src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src=""class="imgCatch"  class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                             </div>
                           </div>
@@ -55,45 +58,48 @@
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src=""class="imgCatch"  class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                             </div>
                           </div>
                       </div>
+                      <br>
                       <div class="col">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                             </div>
                           </div>
                       </div>
                     </div>
+                     <br>
+                     <br>
                     <div class="row align-items-center">
                       <div class="col">
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100"draggable = "true" alt="">
                               </div>
                             </div>
                           </div>
@@ -102,13 +108,13 @@
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                             </div>
                           </div>
@@ -117,73 +123,77 @@
                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block" draggable = "true" w-100" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block" draggable = "true" w-100" alt="">
                               </div>
                               <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="row align-items-end">
-                      <div class="col">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carouselInner">
-                              <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                              </div>
-                              <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
+                                <img src="" class="imgCatch" class="d-block w-100" draggable = "true" alt="">
                               </div>
                             </div>
                           </div>
                       </div>
                     </div>
                   </div>
-                <!-- <div class="row-align-items-center">
-                    <div class="col">1</div>
-                    <div class="col">1</div>
-                    <div class="col">1</div>
-                    <div class="col">1</div>
-                </div> -->
-            </div>
+                </div>
+
+                    <div class="row align-items-end">
+                    <h2>My Favorite Movie List</h2>
+                      <!-- <div class="row">
+                          <div class="empty"></div>
+                          <div class="empty"></div>
+                          <div class="empty"></div>
+                          <div class="empty"></div>
+                          <div class="empty"></div>
+                       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                               <div class="carousel-item">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                            </div>
+                          </div>
+                      </div> 
+                      <div class="col">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carouselInner">
+                              <div class="carousel-item active">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                            </div>
+                          </div>
+                      </div> -->
+                      <!-- <div class="col">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="" class="d-block w-100" alt="">
+                              </div>
+                            </div>
+                          </div>
+                      </div>   -->
+                    </div>
+                  
+
+            
         </div>
         </div>
         </div>
